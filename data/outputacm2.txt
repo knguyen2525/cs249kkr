@@ -1,0 +1,316 @@
+#*Automated Deduction in Geometry: 5th International Workshop, ADG 2004, Gainesville, FL, USA, September 16-18, 2004, Revised Papers (Lecture Notes in Computer ... / Lecture Notes in Artificial Intelligence)
+#@Hoon Hong,Dongming Wang
+#t2006
+#c
+#index0
+
+#*A+ Certification Core Hardware (Text & Lab Manual)
+#@Charles J. Brooks
+#t2003
+#c
+#index1
+
+#*Performance engineering in industry: current practices and adoption challenges
+#@Ahmed E. Hassan,Parminder Flora
+#t2007
+#cProceedings of the 6th international workshop on Software and performance
+#index2
+#!This panel session discusses performance engineering practices in industry. Presentations in the session will explore the use of lightweight techniques and approaches in order to permit the cost effective and rapid adoption of performance modeling research by large industrial software systems.
+
+#*Dude, You Can Do It! How to Build a Sweeet PC
+#@Darrel Creacy,Carlito Vicencio
+#t2005
+#c
+#index3
+#!Whether you're frustrated with current PC offerings (and their inflated prices) or are simply looking for a cool project to take on, building a computer from the ground up using off-the-shelf parts can offer significant advantages. In these pages, computer dudes Darrel Wayne Creacy and Carlito Vicencio outline those advantages and then show you how to build the computer of your dreams. The pair begins by explaining what components make up a PC and what you need to think about when selecting those components, before helping you determine your needs and suggesting various configurations to fit those uses. Breaking the process down into its simplest terms, the authors provide component lists for a number of different PC setups: for students, home users, multimedia/home-theater enthusiasts, high-end graphic/video/audio producers, and more. Using plain language and plenty of visual and instructional aids--photos, illustrations, diagrams, step-by-step directions, and more--the authors ensure that even someone (like you!) who knows nothing about technology can build the perfect PC! On a more personal note, the authors are donating a percentage of their income from this book to the Breast Cancer Research Foundationï¾to thank all the women in their lives who have supported them and battled the disease. For more information about BCRF, please visit http://www.bcrfcure.org/.
+
+#*What Every Programmer Needs to Know about Security (Advances in Information Security)
+#@Neil Daswani,Anita Kesavan
+#t2006
+#c
+#index4
+
+#*Interpreting Kullback-Leibler divergence with the Neyman-Pearson lemma
+#@Shinto Eguchi,John Copas
+#t2006
+#cJournal of Multivariate Analysis
+#index5
+#%436405
+#!Kullback-Leibler divergence and the Neyman-Pearson lemma are two fundamental concepts in statistics. Both are about likelihood ratios: Kullback-Leibler divergence is the expected log-likelihood ratio, and the Neyman-Pearson lemma is about error rates of likelihood ratio tests. Exploring this connection gives another statistical interpretation of the Kullback-Leibler divergence in terms of the loss of power of the likelihood ratio test when the wrong distribution is used for one of the hypotheses. In this interpretation, the standard non-negativity property of the Kullback-Leibler divergence is essentially a restatement of the optimal property of likelihood ratios established by the Neyman-Pearson lemma. The asymmetry of Kullback-Leibler divergence is overviewed in information geometry.
+
+#*Digital Media: Transformations in Human Communication
+#@Lee Humphreys,Paul Messaris
+#t2006
+#c
+#index6
+
+#*TOPP---the OpenMS proteomics pipeline
+#@Oliver Kohlbacher,Knut Reinert,Clemens Gröpl,Eva Lange,Nico Pfeifer,Ole Schulz-Trieglaff,Marc Sturm
+#t2007
+#cBioinformatics
+#index7
+#!Motivation: Experimental techniques in proteomics have seen rapid development over the last few years. Volume and complexity of the data have both been growing at a similar rate. Accordingly, data management and analysis are one of the major challenges in proteomics. Flexible algorithms are required to handle changing experimental setups and to assist in developing and validating new methods. In order to facilitate these studies, it would be desirable to have a flexible 'toolbox' of versatile and user-friendly applications allowing for rapid construction of computational workflows in proteomics. Results: We describe a set of tools for proteomics data analysis---TOPP, The OpenMS Proteomics Pipeline. TOPP provides a set of computational tools which can be easily combined into analysis pipelines even by non-experts and can be used in proteomics workflows. These applications range from useful utilities (file format conversion, peak picking) over wrapper applications for known applications (e.g. Mascot) to completely new algorithmic techniques for data reduction and data analysis. We anticipate that TOPP will greatly facilitate rapid prototyping of proteomics data evaluation pipelines. As such, we describe the basic concepts and the current abilities of TOPP and illustrate these concepts in the context of two example applications: the identification of peptides from a raw dataset through database search and the complex analysis of a standard addition experiment for the absolute quantitation of biomarkers. The latter example demonstrates TOPP's ability to construct flexible analysis pipelines in support of complex experimental setups. Availability: The TOPP components are available as open-source software under the lesser GNU public license (LGPL). Source code is available from the project website at www.OpenMS.de Contact: oliver.kohlbacher@uni-tuebingen.de
+
+#*Type Graphics and MacIntosh
+#@John Blaint
+#t1987
+#c
+#index8
+
+#*Adaptive Hypermedia and Adaptive Web-Based Systems: 4th International Conference, AH 2006, Dublin, Ireland, June 21-23, 2006, Proceedings (Lecture Notes in Computer Science)
+#@Vincent Wade,Helen Ashman,Barry Smyth
+#t2006
+#c
+#index9
+
+#*Dependable Computing: Second Latin-American Symposium, LADC 2005, Salvador, Brazil, October 25-28, 2005, Proceedings (Lecture Notes in Computer Science)
+#@Carlos Alberto Maziero,João Gabriel Silva,Aline Maria Santos Andrade,Flávio Morais de Assis Silva
+#t2005
+#c
+#index10
+
+#*Calculus Early Transcendentals Single Variable
+#@Howard A. Anton
+#t2006
+#c
+#index11
+
+#*Webbots, Spiders, and Screen Scrapers
+#@Michael Schrenk,Michael Shrenk
+#t2007
+#c
+#index12
+#!The Internet is bigger and better than what a mere browser allows. Webbots, Spiders, and Screen Scrapers is for programmers and businesspeople who want to take full advantage of the vast resources available on the Web. There's no reason to let browsers limit your online experience-especially when you can easily automate online tasks to suit your individual needs. Learn how to write webbots and spiders that do all this and more: Programmatically download entire websites Effectively parse data from web pages Manage cookies Decode encrypted files Automate form submissions Send and receive email Send SMS alerts to your cell phone Unlock password-protected websites Automatically bid in online auctions Exchange data with FTP and NNTP servers Sample projects using standard code libraries reinforce these new skills. You'll learn how to create your own webbots and spiders that track online prices, aggregate different data sources into a single web page, and archive the online data you just can't live without. You'll learn inside information from an experienced webbot developer on how and when to write stealthy webbots that mimic human behavior, tips for developing fault-tolerant designs, and various methods for launching and scheduling webbots. You'll also get advice on how to write webbots and spiders that respect website owner property rights, plus techniques for shielding websites from unwanted robots. As a bonus, visit the author's website to test your webbots on sample target pages, and to download the scripts and code libraries used in the book. Some tasks are just too tedious-or too important!- to leave to humans. Once you've automated your online life, you'll never let a browser limit the way you use the Internet again.
+
+#*Fast k-NN Classification Rule Using Metrics on Space-Filling Curves
+#@E. Skubalska-Rafajtowicz,A. Krzyzak
+#t1996
+#cProceedings of the 13th International Conference on Pattern Recognition - Volume 2
+#index13
+
+#*Making the Digital City: The Early Shaping of Urban Internet Space (Design & the Built Environment S.)
+#@Alessandro Aurigi
+#t2005
+#c
+#index14
+
+#*Linspire 5.0: The No Nonsense Guide! (No Nonsense Guide! series)
+#@Eric Grebler
+#t2005
+#c
+#index15
+
+#*Podcasting for Profit: A Proven 10-Step Plan for Generating Income Through Audio and Video Podcasting
+#@Allan Hunkin
+#t2007
+#c
+#index16
+
+#*Approximating fluid schedules in crossbar packet-switches and Banyan networks
+#@Michael Rosenblum,Constantine Caramanis,Michel X. Goemans,Vahid Tarokh
+#t2006
+#cIEEE/ACM Transactions on Networking (TON)
+#index17
+#%357875
+#%27
+#%317448
+#%319987
+#%28
+#%95255
+#%294124
+#%30
+#%610127
+#!We consider a problem motivated by the desire to provide flexible, rate-based, quality of service guarantees for packets sent over input queued switches and switch networks. Our focus is solving a type of online traffic scheduling problem, whose input at each time step is a set of desired traffic rates through the switch network. These traffic rates in general cannot be exactly achieved since they assume arbitrarily small fractions of packets can be transmitted at each time step. The goal of the traffic scheduling problem is to closely approximate the given sequence of traffic rates by a sequence of transmissions in which only whole packets are sent. We prove worst-case bounds on the additional buffer use, which we call backlog, that results from using such an approximation.We first consider the N × N, input queued, crossbar switch. Our main result is an online packet-scheduling algorithm using no speedup that guarantees backlog at most (N+1)2/4 packets at each input port and each output port. Upper bounds on worst-case backlog have been proved for the case of constant fluid schedules, such as the N2-2N+2 bound of Chang, Chen, and Huang (INFOCOM, 2000). Our main result for the crossbar switch is the first, to our knowledge, to bound backlog in terms of switch size N for arbitrary, time-varying fluid schedules, without using speedup.Our main result for Banyan networks is an exact characterization of the speedup required to maintain bounded backlog, in terms of polytopes derived from the network topology.
+
+#*Federated Identity Management And Web Services Security With IBM Tivoli Security Solutions
+#@Axel Bucker
+#t2005
+#c
+#index96319
+
+#*Start with a Digital Camera (Special Edition) (2nd Edition) (Start with a)
+#@John Odam
+#t2003
+#c
+#index19
+
+#*Open Process Frameworks: Patterns for the Adaptive e-Enterprise (Practitioners)
+#@David A. Marca
+#t2005
+#c
+#index20
+
+#*Fast and Efficient Context-Aware Services (Wiley Series on Communications Networking & Distributed Systems)
+#@Danny Raz,Arto Tapani Juhola,Joan Serrat-Fernandez,Alex Galis
+#t2006
+#c
+#index21
+
+#*Multimedia Directory 1997
+#@
+#t1997
+#c
+#index22
+
+#*ASIS&T Thesaurus of Information Science, Technology, And Librarianship (Asist Monograph Series)
+#@Alice Redmond-neal,Marjorie M. K. Hlava
+#t2005
+#c
+#index23
+
+#*On product covering in 3-tier supply chain models: natural complete problems for W[3] and W[4]
+#@Jianer Chen,Fenghui Zhang
+#t2006
+#cTheoretical Computer Science
+#index24
+#%251778
+#%436906
+#%623227
+#%287885
+#!The field of supply chain management has been growing at a rapid pace in recent years, both as a research area and as a practical discipline. In this paper, we study the computational complexity of product covering problems in 3-tier supply chain models, and present natural complete problems for the classes W[3] and W[4] in parameterized complexity theory. This seems the first group of natural complete problems for higher levels in the parameterized intractability hierarchy (i.e., the W-hierarchy), and the first precise complexity characterizations of certain optimization problems in the research of supply chain management. Our results also derive strong computational lower bounds and inapproximability for these optimization problems.
+
+#*Inside SQL Server 2005 Tools (Microsoft Windows Server System Series)
+#@Michael Raheem,Dima Sonkin,Thierry D'Hers,Kami LeMonds
+#t2006
+#c
+#index25
+#!Direct from Microsoft Insiders: the Complete Hands-On Guide toSQL Server 2005's Powerful Tools!Microsoft SQL Server 2005's high-powered management tools can dramaticallyimprove DBA productivity and effectiveness. Now there's a comprehensive guideto SQL Server 2005's toolset, straight from the Microsoft team that created it.This book covers the entire toolset in unprecedented depth, guides databaseprofessionals in choosing the right tools, and shows them how to use varioustools collectively to solve real-world problems. The authors present “how-to”solutions and never-before-published tips for SQL Server 2005 installation,upgrades, configuration, authoring, schema design, development, deployment,optimization, troubleshooting, and more. Coverage includesÂ Understanding how SQL Server 2005 tools differ from their predecessorsÂ Leveraging the new Business Intelligence Development Studio andManagement Studio to accomplish dozens of common tasksÂ Improving security by reducing the “surface area” you exposeÂ Executing queries with the new Query Editor and SQLCMD query toolsÂ Optimizing with the revamped SQL Server Profiler and DatabaseEngine Tuning AdvisorÂ Scheduling maintenance tasks with the SQL Server AgentÂ Monitoring with the Activity Monitor, SQL Server Agent, and other toolsÂ Moving data efficiently and reliably with Integration ServicesÂ Using SQL Server's new e-mail tool, Database MailÂ Managing replication in complex distributed environmentsÂ Mastering SQL Server's Analysis Services' OLAP and Data Mining toolsÂ Using Notification Services 2.0, Reporting Services, and moreÂ Extending functionality using underlying APIs and the includedCD-ROM's sample code.MICHAEL RAHEEM is the senior product manager of the Microsoft SQL Serverteam and led the design and implementation of several SQL Server tools, suchas SQL Server Management Studio, Database Mail, Upgrade Advisors, andSurface Area Configuration. He currently leads the SQL Server enterprisemarketing efforts including high availability, scalability, and performance.DIMA SONKIN is development lead in the SQL Server Tools group responsiblefor SQL Server Agent, SMO, DMO, SQL Profiler, Database Engine Tuning Advisor,Database Mail, SQLMail, SqlCmd, and OSQL.THIERRY D'HERS is the lead program manager on Microsoft's SQL BI AnalysisServices team and has spent five years designing and specifying AnalysisServices tools.KAMI LEMONDS is the documentation manager for Microsoft's SQL Server UserEducation team and contributed to the SQL Server 2000 Resource Kit.CD-ROM contains all sample code from the book and correspondingVisual Studio project files.ContentsForeword . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . xviiPreface . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . xixAcknowledgments . . . . . . . . . . . . . . . . . . . . . . . xxviAbout the Authors . . . . . . . . . . . . . . . . . . . . . . . xxviiChapter 1 Inside the Fundamentals. . . . . . . . . . . . . . . . . . . . . 1Chapter 2 Inside the Installation and Upgrade Tools. . . . . . . 23Chapter 3 Inside the Configuration Tools . . . . . . . . . . . . . . . 73Chapter 4 Inside Management and Administration Tools . . 129Chapter 5 Inside Data Authoring Tools . . . . . . . . . . . . . . . . 181Chapter 6 Inside SQLCMD Query Tools . . . . . . . . . . . . . . . . 199Chapter 7 Inside Tuning and Optimization Tools . . . . . . . . . 237Chapter 8 Inside Scheduling Tools . . . . . . . . . . . . . . . . . . . 273Chapter 9 Inside Monitoring Tools. . . . . . . . . . . . . . . . . . . . 305Chapter 10 Inside Email Tools . . . . . . . . . . . . . . . . . . . . . . . . 337Chapter 11 Inside Programming Object Models . . . . . . . . . . 357Chapter 12 Inside Replication Tools . . . . . . . . . . . . . . . . . . . 385Chapter 13 Inside Analysis Services OLAP Tools . . . . . . . . . 429Chapter 14 Inside Analysis Services DataMining Tools . . . . . . . . . . . . . . . . . . . . . . . . . . . . 519Chapter 15 Inside Notification Services Tools . . . . . . . . . . . 543Chapter 16 Inside Integration Services Tools . . . . . . . . . . . . 601Chapter 17 Inside the Reporting Services Tools . . . . . . . . . . 679Appendix A Sample KPI Client Code- Retrieving andExposing Your First KPI. . . . . . . . . . . . . . . . . . . . 711Appendix B KPI Utilities-Code for Parsing DisplayFolders and Getting Image Indexes . . . . . . . . . . 713Appendix C KPI Viewer . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 721Appendix D Complete List of Data Mining StoredProcedures . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 723Index . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 733
+
+#*Electronic Engineer's Handbook (Core Handbook CD-ROMs)
+#@Donald Christiansen
+#t1999
+#c
+#index26
+
+#*Call of Duty 2: Big Red One(tm) Official Strategy Guide (Official Strategy Guides)
+#@
+#t2005
+#c
+#index27
+
+#*Inside Microsoft Dynamics AX 4.0
+#@Arthur Greef,Michael Fruergaard Pontoppidan,Lars Dragheim Olsen,Palle Agermark,Hans J. Skovgaard
+#t2006
+#c
+#index28
+
+#*Wiley Plus/Web CT Stand-alone to accompany Java Concepts (Wiley Plus Products)
+#@Cay S. Horstmann
+#t2006
+#c
+#index29
+
+#*Modeling methodology b: distributed simulation and the high level architecture
+#@
+#t2006
+#cProceedings of the 38th conference on Winter simulation
+#index30
+
+#*Beginning Ruby on Rails (Wrox Beginning Guides)
+#@Steve Holzner
+#t2006
+#c
+#index31
+
+#*Introduction to Information Systems
+#@R. Kelly Rainer
+#t2007
+#c
+#index32
+
+#*SUSE Linux Enterprise Server Administration (Course 3037)
+#@Jason Eckert
+#t2006
+#c
+#index33
+
+#*Hyperstat: Macintosh Hypermedia for Analyzing Data and Learning Statistics
+#@David M. Lane
+#t1993
+#c
+#index34
+
+#*An Integrative Modelling Approach for Simulation and Analysis of Adaptive Agents
+#@Tibor Bosse,Catholijn M. Jonker,Jan Treur
+#t2006
+#cProceedings of the 39th annual Symposium on Simulation
+#index35
+#%247215
+#%618899
+#!To simulate adaptive agents with abilities matching those of their real-world counterparts, a natural approach is to incorporate adaptation mechanisms such as classical conditioning into agent-based simulation. Existing models for adaptation mechanisms are usually based on quantitative methods such as DST. In contrast, agent-based simulation is usually based on qualitative, logical languages. To bridge this gap, this paper puts forward an integrative approach to simulate and analyse the conditioning process of an adaptive agent, which integrates quantitative and qualitative aspects within one temporal specification language. The approach comprises (1) simulation of adaptation mechanisms in an executable language, (2) automated analysis of dynamic properties against simulation traces, and (3) verification of representation relations for internal agent states against simulation traces. Furthermore, the approach addresses the issue of realism of intermediate states in a simulated conditioning process.
+
+#*Notes from industry
+#@Stanley Habib
+#t1973
+#cACM SIGMICRO Newsletter
+#index36
+#!OCEANPORT, N.J., SEPT. 25, 1973 -- A 16-bit minicomputer priced at under $2,000.00 in quantities and a 32-bit minicomputer priced at under $6,000.00 in quantities, were introduced today by Interdata, Inc.
+
+#*A New Quadtree Decomposition Reconstruction Method
+#@J. Knipe,X. Li
+#t1996
+#cProceedings of the 13th International Conference on Pattern Recognition - Volume 2
+#index37
+
+#*Computer Accounting with QuickBooks 2006
+#@Donna Ulmer
+#t2006
+#c
+#index38
+
+#*Program Evaluation: Improving The Flow Of Information To The Congress
+#@
+#t2004
+#c
+#index39
+
+#*Jocelyn Robert: Aucune de mes mains ne fait mal
+#@Jocelyn Robert
+#t2005
+#c
+#index40
+
+#*Microprogramming for the hardware engineer
+#@John R. Mick
+#t1976
+#cACM SIGMICRO Newsletter
+#index41
+#!With the advent of the Am2901 four-bit microprocessor slice and the Am2909 bipolar microprogram sequencer, the design engineer can upgrade the performance of existing systems or implement new systems taking advantage of the latest state-of-the-art technology in Low-Power Schottky integrated circuits. These devices, however, utilize a new concept in machine design not familiar to many design engineers. This technique is called microprogramming. The ACM Portal is published by the Association for Computing Machinery. Copyright © 2010 ACM, Inc. Terms of Usage Privacy Policy Code of Ethics Contact Us Useful downloads: Adobe Acrobat QuickTime Windows Media Player Real Player
+
+#*Special Edition Using Adobe Creative Suite 2 (Special Edition Using)
+#@Michael Smick
+#t2005
+#c
+#index42
+#!Get acquainted with Adobe CS2 with the help of the ultimate comprehensive reference guide, Special Edition Using Adobe Creative Suite 2. Not only does it include material that covers the new product release, the author and team of contributors also covers how to use the individual products and how to integrate them so that you can use the Suite in an effective manner. The entire Suite is covered, including tools that aren't as well-documented. Youll find coverage of: Photoshop Illustrator InDesign GoLive Acrobat Designer Version Cue Bridge Stock PhotoWith Special Edition Using Adobe Creative Suite 2, you will easily master Adobe Creative Suite 2. The ACM Portal is published by the Association for Computing Machinery. Copyright © 2010 ACM, Inc. Terms of Usage Privacy Policy Code of Ethics Contact Us Useful downloads: Adobe Acrobat QuickTime Windows Media Player Real Player
+
+#*At Ease With Performa
+#@Gene Orwell
+#t1994
+#c
+#index43
+
+#*Guia Visual de Microsoft Office 2000/ Microsoft Office 2000 Visual Guide (Guias Visuales)
+#@Jose Pedro Llamazares
+#t2003
+#c
+#index44
+
+#*Microsoft Expression Web: Visual QuickStart Guide
+#@Nolan Hester
+#t2007
+#c
+#index45
+#!Get a jump start on using this brand-new Web creation tool from Microsoft. Built from the ground up using current Web standards, Expression Web make it easy to create pages that look good in all browsers. Mirroring the program's focus on standards, the book shows you how to use Cascading Style Sheets to build consistent, easy to navigateï¾ designs. CSS newcomers will welcome the plain-spoken approach to a sometimes intimidating topic. Old hands at CSS will find plenty of tips on using Expression Web's many style tools, which are some of the best available in any Web creation program.ï¾ Packed with more than 600 screenshots, the book goes beyond crafting good-looking single pages. Instead, it shows you how to use templates to generate whole sites with uniform, yet creative, layouts that can be reconfigured with the click of a button. You'll also learn how to give sites extra polish with interactive behaviors and forms.ï¾ Microsoft Expression Web: Visual Quickstart Guide contains exactly what you need to get started building standards-compliant Web sites using this powerful tool.
+
+#*Fast Track: Linux Apache Web Server & Workstation Management
+#@
+#t2004
+#c
+#index46
+
+#*A+ Practice Questions Exam Cram (Exams 220-401, 220-402) (2nd Edition) (Exam Cram 2)
+#@Charles J. Brooks
+#t2007
+#c
+#index252
