@@ -45,7 +45,7 @@ public class GenPairs {
 	}
 
 	//Generates positive pairs
-	//things to consider: not going back to same one again. Checking to make sure not -1
+	//Symmetric
 	public Pair generatePair(int startType, int s){
 		int halfPathLength = (rand.nextInt(4) + 1);
 		ArrayList<Integer> currTypePath = new ArrayList<Integer>(halfPathLength);
@@ -186,7 +186,86 @@ public class GenPairs {
 		System.out.print("fullTypePath: ");
 		printList(fullTypePath);
 
-		Pair p = new Pair(s, t, startType, endType);
+		Pair p = new Pair(s, t, startType, endType, 1);
+		return p;
+	}
+
+	public Pair generatePairNonSym(int startType, int s){
+		int fullPathLength = (rand.nextInt(4) + 1) * 2;
+		ArrayList<Integer> fullTypePath = new ArrayList<Integer>();
+		ArrayList<Integer> fullIndexPath = new ArrayList<Integer>();
+
+		int currType = startType;
+		int currIndex = s;
+
+		fullTypePath.add(currType);
+		fullIndexPath.add(currIndex);
+
+		while(fullPathLength != 0) {
+			int nextType = -1;
+			int nextIndex = -1;
+
+			while(nextIndex == -1) {
+				if(currType == 0) {
+					nextType = rand.nextInt(3) + 1;
+					if(paperToAuthor.get(currIndex).get(0) == -1 && paperToVenue.get(currIndex).get(0) == -1 && paperToCites.get(currIndex).get(0) == -1) {
+						return null;
+					}
+					if(nextType == 1) {
+						//get next author
+						ArrayList<Integer> tempList = paperToAuthor.get(currIndex);
+						if(tempList.size() != 0 && tempList.get(0) != -1)
+							nextIndex = tempList.get(rand.nextInt(tempList.size()));
+					}
+					else if(nextType == 2) {
+						//get next venue
+						ArrayList<Integer> tempList = paperToVenue.get(currIndex);
+						if(tempList.size() != 0 && tempList.get(0) != -1)
+							nextIndex = tempList.get(rand.nextInt(tempList.size()));
+					}
+					else {
+						//get next cite
+						ArrayList<Integer> tempList = paperToCites.get(currIndex);
+						if(tempList.size() != 0 && tempList.get(0) != -1)
+							nextIndex = tempList.get(rand.nextInt(tempList.size()));
+					}
+				}
+				else if(currType == 1) {
+					nextType = 0;
+					ArrayList<Integer> tempList = authorToPaper.get(currIndex);
+					nextIndex = tempList.get(rand.nextInt(tempList.size()));
+
+				}
+				else if(currType == 2) {
+					nextType = 0;
+					ArrayList<Integer> tempList = venueToPaper.get(currIndex);
+					nextIndex = tempList.get(rand.nextInt(tempList.size()));
+				}
+				else {
+					nextType = 0;
+					ArrayList<Integer> tempList = citesToPaper.get(currIndex);
+					nextIndex = tempList.get(rand.nextInt(tempList.size()));
+				}
+			}
+
+			currType = nextType;
+			currIndex = nextIndex;
+
+			fullTypePath.add(currType);
+			fullIndexPath.add(currIndex);
+
+			fullPathLength--;
+		}
+
+		int endType = currType;
+		int t = currIndex;
+
+		System.out.print("fullIndexPath: ");
+		printList(fullIndexPath);
+		System.out.print("fullTypePath: ");
+		printList(fullTypePath);
+
+		Pair p = new Pair(s, t, startType, endType, 1);
 		return p;
 	}
 
@@ -218,6 +297,10 @@ public class GenPairs {
 		}
 	}
 
+	public Pair getNegPair(Pair p) {
+		return new Pair(getRandomElement(p.typeLeft), getRandomElement(p.typeRight), p.typeLeft, p.typeRight, -1);
+	}
+
 	public static void main(String args[]) {
 		Random rand = new Random();
 		GenPairs gp = new GenPairs();
@@ -234,8 +317,20 @@ public class GenPairs {
 			}
 		}
 
-		for(int j=0; j<pairs.size(); j++) {
-			pairs.get(j).printPair();
+		ArrayList<Pair> negPairs = new ArrayList<Pair>();
+		for(i=0; i<pairs.size(); i++) {
+			Pair np = gp.getNegPair(pairs.get(i));
+			negPairs.add(np);
+		}
+
+		System.out.println("Positive Pairs:");
+		for(i=0; i<pairs.size(); i++) {
+			pairs.get(i).printPair();
+		}
+
+		System.out.println("\nNegativePairs:");
+		for(i=0; i<negPairs.size(); i++) {
+			negPairs.get(i).printPair();
 		}
 	}
 }

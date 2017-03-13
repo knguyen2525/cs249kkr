@@ -1,0 +1,30 @@
+Node
+  mp <- metapath taken to get here
+  priority score S
+  array of (u, v)
+  array BPCRW scores. One for each (u, v) pair
+
+GreedyTree(KB G, examplePairs pairs, residualVector r)
+  mp <- empty metapath
+  Given new r, update priority scores of all the leaves
+  while leaves still have paths they can take do
+    M <- leaf with largest priority score S
+    vector m <- {0,...,0} where |m| is equal to |pairs|
+    foreach (u, v) pair p in node M do
+      if (u, v) is a pair we passed in (negative or positive) then
+        update number in vector m corresponding to (u, v) pair with (u, v)'s BPCRW score
+    if vector m has something not zero then
+      update priority score of node M with cosineSim(vector m, residual vector r)
+      If M's priority score S is max out of all leaves then
+        mp <- get metapath from root to M
+        break;
+    else
+      foreach tuple p in M do
+        foreach v in (u, v) pairs, look at links it can take (toVenue, toAuthor, toCite, toPaper)
+          e <- the link type
+          if node M does not have a child N with e yet
+            create new child N for M with this link type
+          populate the child N with new (u, w) pairs and BPCRW scores where u remains the same as in M and w is node index gotten by taking v to w via e
+          calculate priority score S for N
+          add e to mp of node N
+return mp, m
