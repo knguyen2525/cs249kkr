@@ -12,7 +12,7 @@ bool isInside(const string & str, char c) {
 }
 
 int main() {
-  unordered_map<string,int> authorToIndex;
+  unordered_map<string,int> venueToIndex;
   ifstream fin;
   fin.open("../data/outputacm2.txt");
   int n = 0;
@@ -26,14 +26,14 @@ int main() {
           while(ss.good()) {
               string substr;
               getline( ss, substr, ',' );
-              if(authorToIndex.find(substr) == authorToIndex.end()) {
-                  authorToIndex[substr] = n ;
+              if(venueToIndex.find(substr) == venueToIndex.end()) {
+                  venueToIndex[substr] = n ;
                   n++;
               }
           }
         }
-        else if(authorToIndex.find(line)==authorToIndex.end()) {
-          authorToIndex[line] = n;
+        else if(venueToIndex.find(line)==venueToIndex.end()) {
+          venueToIndex[line] = n;
           n++;
         }
       }
@@ -41,13 +41,13 @@ int main() {
   }
   fin.close();
 
-  vector<vector<int> > authorToPapers(authorToIndex.size());
+  vector<vector<int> > venueToPapers(venueToIndex.size());
 
   ifstream fin2;
   fin2.open("../data/outputacm2.txt");
   ofstream myfile;
-  myfile.open("../matrices/paperToAuthor.csv");
-  vector<int> authorsPerPaper;
+  myfile.open("../matrices/papersToVenues.csv");
+  vector<int> venuesPerPaper;
   int lineCount = 0;
 
   for(string line; getline(fin2, line); ) {
@@ -58,44 +58,45 @@ int main() {
         while(ss.good()) {
           string substr;
           getline(ss, substr, ',');
-          if(authorToIndex.find(substr) != authorToIndex.end()) {
-            unordered_map<string,int>::iterator got = authorToIndex.find(substr);
-            authorsPerPaper.push_back(got -> second);
-            authorToPapers[got -> second].push_back(lineCount);
+          if(venueToIndex.find(substr) != venueToIndex.end()) {
+            unordered_map<string,int>::iterator got = venueToIndex.find(substr);
+            venuesPerPaper.push_back(got -> second);
+            venueToPapers[got -> second].push_back(lineCount);
           }
         }
       }
-      else if(authorToIndex.find(line)!=authorToIndex.end()) { //single author
-        unordered_map<string,int>::iterator got = authorToIndex.find(line);
-        authorsPerPaper.push_back(got -> second);
-        authorToPapers[got -> second].push_back(lineCount);
+      else if(line == "") {
+        venuesPerPaper.push_back(-1);
+      }
+      else { //single author
+        unordered_map<string,int>::iterator got = venueToIndex.find(line);
+        venuesPerPaper.push_back(got -> second);
+        venueToPapers[got -> second].push_back(lineCount);
       } //output the vector
-      else
-        authorsPerPaper.push_back(-1);
 
-      for(int i = 0; i <authorsPerPaper.size();i++) {
-          if(i + 1 ==authorsPerPaper.size())
-              myfile << authorsPerPaper[i];
+      for(int i = 0; i <venuesPerPaper.size();i++) {
+          if(i + 1 ==venuesPerPaper.size())
+              myfile << venuesPerPaper[i];
           else
-              myfile << authorsPerPaper[i]<< ",";
+              myfile << venuesPerPaper[i]<< ",";
       }
       myfile << endl;
-      authorsPerPaper.clear();
+      venuesPerPaper.clear();
       lineCount++;
     }
   }
 
-  ofstream authorToPapersOS;
-  authorToPapersOS.open("../matrices/authorToPaper.csv");
-  for(int i=0; i<authorToPapers.size(); i++) {
-    if(authorToPapers[i].size() != 0 ) {
-      for(int j=0; j<authorToPapers[i].size(); j++) {
-        if((j+1) == authorToPapers[i].size())
-            authorToPapersOS << authorToPapers[i][j];
+  ofstream venueToPapersOS;
+  venueToPapersOS.open("../matrices/venuesToPapers.csv");
+  for(int i=0; i<venueToPapers.size(); i++) {
+    if(venueToPapers[i].size() != 0 ) {
+      for(int j=0; j<venueToPapers[i].size(); j++) {
+        if((j+1) == venueToPapers[i].size())
+            venueToPapersOS << venueToPapers[i][j];
         else
-            authorToPapersOS << authorToPapers[i][j] << ",";
+            venueToPapersOS << venueToPapers[i][j] << ",";
       }
-      authorToPapersOS << endl;
+      venueToPapersOS << endl;
     }
   }
 }

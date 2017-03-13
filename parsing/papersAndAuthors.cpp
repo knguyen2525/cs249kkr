@@ -11,6 +11,15 @@ bool isInside(const string & str, char c) {
     return str.find(c) != string::npos;
 }
 
+void replaceAll(std::string& str, const std::string& from, const std::string& to) {
+  if(from.empty()) return;
+  size_t start_pos = 0;
+  while((start_pos = str.find(from, start_pos)) != std::string::npos) {
+    str.replace(start_pos, from.length(), to);
+    start_pos += to.length(); // In case 'to' contains 'from', like replacing 'x' with 'yx'
+  }
+}
+
 int main() {
   unordered_map<string,int> authorToIndex;
   ifstream fin;
@@ -21,6 +30,8 @@ int main() {
     if(line[1]=='@') {
       line.erase(0,2);
       if(line != "") {
+        replaceAll(line, ".,", ". ");
+        replaceAll(line, ", ", " ");
         if(isInside(line,',')) {//if multiple authors
           stringstream ss(line);
           while(ss.good()) {
@@ -46,13 +57,15 @@ int main() {
   ifstream fin2;
   fin2.open("../data/outputacm2.txt");
   ofstream myfile;
-  myfile.open("../matrices/paperToAuthor.csv");
+  myfile.open("../matrices/papersToAuthors.csv");
   vector<int> authorsPerPaper;
   int lineCount = 0;
 
   for(string line; getline(fin2, line); ) {
     if(line[1]=='@') {
       line.erase(0,2);
+      replaceAll(line, ".,", ". ");
+      replaceAll(line, ", ", " ");
       if(isInside(line,',')) { //multiply authors
         stringstream ss(line);
         while(ss.good()) {
@@ -65,13 +78,14 @@ int main() {
           }
         }
       }
-      else if(authorToIndex.find(line)!=authorToIndex.end()) { //single author
+      else if(line == "") {
+        authorsPerPaper.push_back(-1);
+      }
+      else { //single author
         unordered_map<string,int>::iterator got = authorToIndex.find(line);
         authorsPerPaper.push_back(got -> second);
         authorToPapers[got -> second].push_back(lineCount);
       } //output the vector
-      else
-        authorsPerPaper.push_back(-1);
 
       for(int i = 0; i <authorsPerPaper.size();i++) {
           if(i + 1 ==authorsPerPaper.size())
@@ -86,7 +100,7 @@ int main() {
   }
 
   ofstream authorToPapersOS;
-  authorToPapersOS.open("../matrices/authorToPaper.csv");
+  authorToPapersOS.open("../matrices/authorsToPapers.csv");
   for(int i=0; i<authorToPapers.size(); i++) {
     if(authorToPapers[i].size() != 0 ) {
       for(int j=0; j<authorToPapers[i].size(); j++) {

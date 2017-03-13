@@ -12,10 +12,10 @@ int main() {
     fin.open("../data/outputacm2.txt");
 
     ofstream os;
-    os.open("../matrices/paperToCites.csv");
+    os.open("../matrices/papersToCites.csv");
 
     ofstream os1;
-    os1.open("../matrices/citeToPapers.csv");
+    os1.open("../matrices/citesToPapers.csv");
 
     vector<vector<int> > citesToPapersVector;
     unordered_map<string,int> citesToPapersHash;
@@ -26,15 +26,16 @@ int main() {
     for(string line; getline(fin, line);) {
       if(line[1]=='%') {
         line.erase(0,2);
-        myvector.push_back(line);
         inCites = 1;
         unordered_map<string,int>::iterator got = citesToPapersHash.find(line);
         if(got != citesToPapersHash.end()) {
             int temp = got -> second;
             citesToPapersVector[temp].push_back(paperCount);
+            myvector.push_back(to_string(temp));
         }
         else {
             citesToPapersHash[line] = citesToPapersVector.size();
+            myvector.push_back(to_string(citesToPapersVector.size()));
             vector<int> v;
             v.push_back(paperCount);
             citesToPapersVector.push_back(v);
