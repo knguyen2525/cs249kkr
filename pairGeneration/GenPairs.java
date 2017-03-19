@@ -3,6 +3,8 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Random;
+import java.io.PrintWriter;
+import java.io.File;
 
 public class GenPairs {
 	private ArrayList<ArrayList<Integer>> paperToAuthor = new ArrayList<ArrayList<Integer>>();
@@ -186,12 +188,12 @@ public class GenPairs {
 		System.out.print("fullTypePath: ");
 		printList(fullTypePath);
 
-		Pair p = new Pair(s, t, startType, endType, 1);
+		Pair p = new Pair(s, t, startType, endType, 1, fullIndexPath, fullTypePath);
 		return p;
 	}
 
 	public Pair generatePairNonSym(int startType, int s){
-		int fullPathLength = (rand.nextInt(4) + 1) * 2;
+		int fullPathLength = (rand.nextInt(6) + 1);
 		ArrayList<Integer> fullTypePath = new ArrayList<Integer>();
 		ArrayList<Integer> fullIndexPath = new ArrayList<Integer>();
 
@@ -265,7 +267,7 @@ public class GenPairs {
 		System.out.print("fullTypePath: ");
 		printList(fullTypePath);
 
-		Pair p = new Pair(s, t, startType, endType, 1);
+		Pair p = new Pair(s, t, startType, endType, 1, fullIndexPath, fullTypePath);
 		return p;
 	}
 
@@ -298,39 +300,99 @@ public class GenPairs {
 	}
 
 	public Pair getNegPair(Pair p) {
-		return new Pair(getRandomElement(p.typeLeft), getRandomElement(p.typeRight), p.typeLeft, p.typeRight, -1);
+		return new Pair(getRandomElement(p.typeLeft), getRandomElement(p.typeRight), p.typeLeft, p.typeRight, -1, null, null);
 	}
 
 	public static void main(String args[]) {
 		Random rand = new Random();
 		GenPairs gp = new GenPairs();
+		ArrayList<Pair> pairsNonSym = new ArrayList<Pair>();
 		ArrayList<Pair> pairs = new ArrayList<Pair>();
 		int i=0;
+		int bound = 100;
 
-		while(i < 5) {
+		//get nonsym pairs
+		while(i < bound) {
+			int startType = rand.nextInt(4);
+			int s = gp.getRandomElement(startType);
+			Pair p = gp.generatePairNonSym(startType, s);
+			if(p != null && p.left != p.right) {
+				pairsNonSym.add(p);
+				i++;
+			}
+		}
+		i=0;
+
+		//get sym pairs
+		while(i < bound) {
 			int startType = rand.nextInt(4);
 			int s = gp.getRandomElement(startType);
 			Pair p = gp.generatePair(startType, s);
-			if(p != null) {
+			if(p != null && p.left != p.right) {
 				pairs.add(p);
 				i++;
 			}
 		}
+		System.out.println(pairsNonSym.size());
+		//get nonsym neg pairs
+		ArrayList<Pair> negPairsNonSym = new ArrayList<Pair>();
+		for(i=0; i<pairsNonSym.size(); i++) {
+			Pair np = gp.getNegPair(pairsNonSym.get(i));
+			negPairsNonSym.add(np);
+		}
 
+		//get sym neg pairs
 		ArrayList<Pair> negPairs = new ArrayList<Pair>();
 		for(i=0; i<pairs.size(); i++) {
 			Pair np = gp.getNegPair(pairs.get(i));
 			negPairs.add(np);
 		}
 
-		System.out.println("Positive Pairs:");
-		for(i=0; i<pairs.size(); i++) {
-			pairs.get(i).printPair();
-		}
+		try{
+	    PrintWriter writer = new PrintWriter("positivePairsNonSym.csv", "UTF-8");
+			for(i=0; i<pairsNonSym.size(); i++) {
+				Pair temp = pairsNonSym.get(i);
+				writer.println(temp.left + "," + temp.right + "," + temp.typeLeft + "," + temp.typeRight + "," + temp.sign);
+			}
+	    writer.close();
 
-		System.out.println("\nNegativePairs:");
-		for(i=0; i<negPairs.size(); i++) {
-			negPairs.get(i).printPair();
+			writer = new PrintWriter("positivePairPathsNonSym.csv", "UTF-8");
+			for(i=0; i<pairsNonSym.size(); i++) {
+				Pair temp = pairsNonSym.get(i);
+				writer.println(temp.indexPathToString() + " " + temp.typePathToString());
+			}
+			writer.close();
+
+			writer = new PrintWriter("negativePairsNonSym.csv", "UTF-8");
+			for(i=0; i<negPairsNonSym.size(); i++) {
+				Pair temp = negPairsNonSym.get(i);
+				writer.println(temp.left + "," + temp.right + "," + temp.typeLeft + "," + temp.typeRight + "," + temp.sign);
+			}
+			writer.close();
+
+/////////////
+			writer = new PrintWriter("positivePairs.csv", "UTF-8");
+			for(i=0; i<pairs.size(); i++) {
+				Pair temp = pairs.get(i);
+				writer.println(temp.left + "," + temp.right + "," + temp.typeLeft + "," + temp.typeRight + "," + temp.sign);
+			}
+			writer.close();
+
+			writer = new PrintWriter("positivePairPaths.csv", "UTF-8");
+			for(i=0; i<pairs.size(); i++) {
+				Pair temp = pairs.get(i);
+				writer.println(temp.indexPathToString() + " " + temp.typePathToString());
+			}
+			writer.close();
+
+			writer = new PrintWriter("negativePairs.csv", "UTF-8");
+			for(i=0; i<negPairs.size(); i++) {
+				Pair temp = negPairs.get(i);
+				writer.println(temp.left + "," + temp.right + "," + temp.typeLeft + "," + temp.typeRight + "," + temp.sign);
+			}
+			writer.close();
+		} catch (IOException e) {
+		   // do something
 		}
 	}
 }
